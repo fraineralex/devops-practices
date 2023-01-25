@@ -1,3 +1,3 @@
-//This is the example 1 develop in the development branch.
+//This is the example 1 confirmed in the staging branch.
 
-console.log('This is the example 1 before comfirm changes')
+console.log('This is the example 1 after comfirm changes located in staging branch')
