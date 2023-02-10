@@ -1,0 +1,23 @@
+services:
+  python:
+    build: ./
+    command: python3 ./main.py
+
+  database:
+    image: postgres
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_USER: developer
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: devops
+
+  adminer:
+    image: adminer
+    restart: always
+    depends_on:
+      - database
+    ports:
+      - 8080:8080
+
